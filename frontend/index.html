@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const token = localStorage.getItem("token");
+            if (!token) {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <input type="text" id="taskInput" placeholder="Nova tarefa">
+    <button onclick="addTask()">Adicionar Tarefa</button>
+    <ul id="task-list"></ul>
+    <script src="script.js" defer></script>
+    
+</body>
+</html>
